@@ -1,14 +1,14 @@
 function parseJokes(data) {
   if (Array.isArray(data)) {
-    return data; // justJokes.json (список строк)
+    return data; 
   }
 
   if (data.jokes && Array.isArray(data.jokes)) {
-    return data.jokes.map(j => j.joke); // jokes.json (список объектов)
+    return data.jokes.map(j => j.joke); 
   }
 
   if (typeof data === "object") {
-    return Object.values(data); // если ключи — 1, 2, 3... (как в justJokes.json)
+    return Object.values(data); 
   }
 
   console.error("Ugyldig format på data.");
